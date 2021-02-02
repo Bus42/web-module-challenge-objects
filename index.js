@@ -61,7 +61,7 @@ export const burger = {
     name: "Burger",
     price: 18,
     category: "Lunch",
-    discount: (code) => code === "public" ? burger.price * .9 : burger.price * .75
+    discount: function(code) { return code === "public" ? burger.price * .9 : burger.price * .75 }
 }
 console.log(burger.discount("teacher"));
 
@@ -215,7 +215,7 @@ function carMaker(odometer) {
     class Car {
         constructor(odometer) {
             this.odometer = odometer;
-            this.drive = (miles) => this.odometer = this.odometer + miles;
+            this.drive = function(miles) { this.odometer = this.odometer + miles };
         }
     }
     return new Car(odometer);
