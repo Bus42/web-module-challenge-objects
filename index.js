@@ -222,7 +222,7 @@ function carMaker(odometer) {
 }
 let heartOfGold = carMaker(10);
 heartOfGold.drive(100);
-console.table(heartOfGold)
+console.table(heartOfGold);
 
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
