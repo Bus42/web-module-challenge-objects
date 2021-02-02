@@ -40,7 +40,9 @@ Test your createMenuItems function by doing the following:
   
   For example: createMenuItem("pizza",5,"lunch") would return this as the object: {name:"Pizza",price:5,category:"lunch"}
 */
+console.groupCollapsed("Task 1b");
 console.table(createMenuItem("Red Beans and Rice", "3.50", "Dinner"));
+console.groupEnd("Task 1b")
 
 
 
@@ -61,7 +63,7 @@ export const burger = {
     name: "Burger",
     price: 18,
     category: "Lunch",
-    discount: function(code) { return code === "public" ? burger.price * .9 : burger.price * .75 }
+    discount: function(code) { return code === "public" ? this.price * .9 : this.price * .75 }
 }
 console.log(burger.discount("teacher"));
 
@@ -91,8 +93,10 @@ Using the reviews array above do the following: (no function needed)
   1. Following the same format (name, rating, feedback), add a new fictitious review object to the reviews array
   2. log the whole array to the console, make sure the new review is inside of it   
 */
-reviews.push({ name: "Zaphod", rating: 5, feedback: "Best drink in existence, like having your brains smashed out by a slice of lemon wrapped round a large gold brick!" })
-console.table(reviews)
+reviews.push({ name: "Zaphod", rating: 5, feedback: "Best drink in existence, like having your brains smashed out by a slice of lemon wrapped round a large gold brick!" });
+console.groupCollapsed("Task 4");
+console.table(reviews);
+console.groupEnd("Task 4");
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -102,7 +106,9 @@ Reyna's feedback is missing! Use what you know to do the following: (no function
 */
 
 reviews[7].feedback = "this place is chill with really cool people, great for getting work done on weekdays";
+console.groupCollapsed("Task 5");
 console.table(reviews);
+console.groupEnd("Task 5");
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -165,7 +171,9 @@ Use the getReviewsByRating function below to do the following:
 function getReviewByRating(array, filter) {
     return array.filter((entry) => entry.rating >= filter && entry.rating < filter + 1);
 }
-console.table(getReviewByRating(reviews, 4))
+console.groupCollapsed("Stretch 1");
+console.table(getReviewByRating(reviews, 4));
+console.groupEnd("Stretch 1");
 
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 2: 💪💪💪💪💪💪💪💪💪💪   
@@ -190,8 +198,9 @@ function getLongReviews(array) {
     })
     return longReviews;
 }
+console.groupCollapsed("Stretch 2");
 console.table(getLongReviews(reviews));
-
+console.groupEnd("Stretch 2");
 
 /* 💪💪💪💪💪💪💪💪💪💪 STRETCH 3: 💪💪💪💪💪💪💪💪💪💪 
 This stretch goal does not use the reviews data!  You create your own object in this stretch goal.
@@ -222,8 +231,9 @@ function carMaker(odometer) {
 }
 let heartOfGold = carMaker(10);
 heartOfGold.drive(100);
+console.groupCollapsed("Stretch 2");
 console.table(heartOfGold);
-
+console.groupEnd("Stretch 2");
 
 /* 🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑 */
 function foo() {
