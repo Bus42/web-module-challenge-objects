@@ -190,7 +190,7 @@ Use the getLongReviews function below to do the following:
 */
 
 function getLongReviews(array) {
-    let longReviews = [];
+    const longReviews = [];
     array.map((entry, index) => {
         const wordArray = entry.feedback.split(' ');
         const wordCount = wordArray.length;
@@ -229,7 +229,7 @@ function carMaker(odometer) {
     }
     return new Car(odometer);
 }
-let heartOfGold = carMaker(10);
+const heartOfGold = carMaker(10);
 heartOfGold.drive(100);
 console.groupCollapsed("Stretch 2");
 console.table(heartOfGold);
